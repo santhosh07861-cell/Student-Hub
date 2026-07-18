@@ -1,0 +1,62 @@
+[
+  {
+    "id": "scholarship-1",
+    "name": "Generation Google Scholarship (APAC)",
+    "organization": "Google",
+    "organizationLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "eligibility": "Currently enrolled as a full-time student in a Bachelor's program for computer science or a closely related field.",
+    "category": "Technology & STEM",
+    "country": "APAC Countries",
+    "amount": "$2,500 USD",
+    "officialApplyLink": "https://buildyourfuture.withgoogle.com/scholarships/generation-google-scholarship-apac",
+    "officialWebsite": "https://buildyourfuture.withgoogle.com/scholarships"
+  },
+  {
+    "id": "scholarship-2",
+    "name": "Rhodes Scholarship",
+    "organization": "Rhodes Trust",
+    "organizationLogo": "https://www.rhodeshouse.ox.ac.uk/media/31668/rh-main-logo.png",
+    "eligibility": "Outstanding academic performance, leadership, and citizenship; pursuing a degree at the University of Oxford.",
+    "category": "All Fields (Postgraduate)",
+    "country": "United Kingdom",
+    "amount": "Fully Funded (Fees + Stipend)",
+    "officialApplyLink": "https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/",
+    "officialWebsite": "https://www.rhodeshouse.ox.ac.uk"
+  },
+  {
+    "id": "scholarship-3",
+    "name": "Erasmus Mundus Joint Masters",
+    "organization": "European Union",
+    "organizationLogo": "https://european-union.europa.eu/themes/contrib/europa_theme/images/logo/logo-eu--en.svg",
+    "eligibility": "Bachelor's degree or equivalent, international study interest across European partner universities.",
+    "category": "Multiple Fields",
+    "country": "European Union",
+    "amount": "Fully Funded (Travel + Visa + Stipend)",
+    "officialApplyLink": "https://ec.europa.eu/programmes/erasmus-plus/opportunities/individuals/students/erasmus-mundus-joint-masters_en",
+    "officialWebsite": "https://ec.europa.eu"
+  },
+  {
+    "id": "scholarship-4",
+    "name": "Gates Cambridge Scholarship",
+    "organization": "Bill & Melinda Gates Foundation",
+    "organizationLogo": "https://www.gatescambridge.org/wp-content/themes/gatescambridge/assets/images/logo.png",
+    "eligibility": "Citizens of any country outside the UK to pursue a full-time postgraduate degree at the University of Cambridge.",
+    "category": "All Fields (Postgraduate)",
+    "country": "United Kingdom",
+    "amount": "Fully Funded (Fees + Maintenance allowance)",
+    "officialApplyLink": "https://www.gatescambridge.org/apply/how-to-apply/",
+    "officialWebsite": "https://www.gatescambridge.org"
+  },
+  {
+    "id": "scholarship-5",
+    "name": "Knight-Hennessy Scholars Program",
+    "organization": "Stanford University",
+    "organizationLogo": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/Stanford-Logo.png",
+    "eligibility": "Enrolled in any graduate degree program at Stanford University, demonstrating independence of thought, purposeful leadership, and a civic mindset.",
+    "category": "All Fields (Graduate)",
+    "country": "United States",
+    "amount": "Fully Funded (Tuition + Living Stipend)",
+    "officialApplyLink": "https://knight-hennessy.stanford.edu/admission",
+    "officialWebsite": "https://knight-hennessy.stanford.edu"
+  }
+]

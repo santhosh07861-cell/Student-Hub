@@ -1,0 +1,6 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="14" fill="#ffffff"/>
+  <!-- Infosys classic blue symbol -->
+  <path d="M30 20H42V70C42 75 45 80 50 80C55 80 58 75 58 70V20H70V70C70 80 61 90 50 90C39 90 30 80 30 70V20Z" fill="#007cc3"/>
+  <rect x="42" y="20" width="16" height="10" fill="#ff7f00"/>
+</svg>

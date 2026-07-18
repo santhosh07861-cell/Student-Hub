@@ -1,0 +1,154 @@
+{
+  "programming-fundamentals": {
+    "subjectName": "Programming Fundamentals",
+    "description": "Master core programming concepts, variables, control flow, functions, and elementary data handling.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "It forms the foundation of all software development. You cannot build complex systems without mastering loops, variables, and functional logic.",
+    "topics": ["Variables", "Data Types", "Operators", "Input Output", "Conditional Statements", "Loops", "Functions", "Arrays", "Strings", "Object Oriented Programming", "Exception Handling", "Collections Framework", "File Handling", "Multithreading"],
+    "usefulFor": ["Semester Exams", "Placements", "Technical Interviews", "Competitive Exams"]
+  },
+  "data-structures-algorithms": {
+    "subjectName": "Data Structures & Algorithms",
+    "description": "Master memory structures, sorting/searching algorithms, complexity math, and optimization techniques.",
+    "estimatedTime": "8 Weeks",
+    "whyImportant": "DSA is key to writing high-performance code and is the primary subject evaluated in coding rounds at top tech companies.",
+    "topics": ["Arrays", "Strings", "Linked Lists", "Stack", "Queue", "Hashing", "Trees", "Graphs", "Heap", "Recursion", "Backtracking", "Greedy Algorithms", "Dynamic Programming"],
+    "usefulFor": ["Placements", "Technical Interviews", "Competitive Exams"]
+  },
+  "sql-databases": {
+    "subjectName": "SQL & Databases",
+    "description": "Understand database models, normalization theory, indexing, transactional queries, and query performance scaling.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "Almost all systems require persistent storage. Design relational schemas and writing performant SQL query strings are fundamental backend skills.",
+    "topics": ["Database Basics", "ER Diagram", "Normalization", "SELECT", "WHERE", "ORDER BY", "GROUP BY", "HAVING", "JOIN", "Subqueries", "Views", "Indexes", "Stored Procedures", "Transactions"],
+    "usefulFor": ["Semester Exams", "Placements", "Technical Interviews"]
+  },
+  "operating-systems": {
+    "subjectName": "Operating Systems",
+    "description": "Learn memory management, thread scheduling, file systems, caching, and kernel operations.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "Understanding the OS allows you to write concurrent systems, manage system resource limits, and debug concurrency deadlocks.",
+    "topics": ["OS Processes", "Threads & Concurrency", "CPU Scheduling", "Mutexes & Semaphores", "Virtual Memory", "Paging & Segmentation", "File Systems", "Deadlock Prevention"],
+    "usefulFor": ["Semester Exams", "Technical Interviews", "Competitive Exams"]
+  },
+  "computer-networks": {
+    "subjectName": "Computer Networks",
+    "description": "Understand communication protocols, TCP/IP layouts, routing strategies, DNS operations, and network sockets.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "Required to design distributed architectures, coordinate API configurations, and troubleshoot connection latencies.",
+    "topics": ["OSI Reference Model", "TCP/IP Protocol Stack", "IP Addressing & Subnetting", "Routing Algorithms", "DNS & HTTP/HTTPS", "Sockets & TCP Handshake", "Load Balancers", "Network Firewalls"],
+    "usefulFor": ["Semester Exams", "Technical Interviews", "Competitive Exams"]
+  },
+  "object-oriented-programming": {
+    "subjectName": "Object Oriented Programming",
+    "description": "Master encapsulation, inheritance, polymorphism, abstraction, interface models, and SOLID design patterns.",
+    "estimatedTime": "3 Weeks",
+    "whyImportant": "OOP is the dominant design paradigm in backend software development, enabling code reusability and structured components.",
+    "topics": ["Classes & Objects", "Encapsulation", "Inheritance", "Polymorphism", "Abstraction & Interfaces", "Method Overloading", "Method Overriding", "SOLID Principles", "Design Patterns"],
+    "usefulFor": ["Semester Exams", "Placements", "Technical Interviews"]
+  },
+  "system-design": {
+    "subjectName": "System Design",
+    "description": "Learn to architect scalable distributed systems, load balancing, sharding, caching, microservices, and message brokers.",
+    "estimatedTime": "6 Weeks",
+    "whyImportant": "Required for designing systems that handle millions of requests, optimizing cloud budgets, and qualifying for senior developer roles.",
+    "topics": ["Load Balancing", "Consistent Hashing", "Database Sharding & Replication", "Caching Strategies (Redis)", "Microservices Architecture", "Message Brokers (Kafka)", "Rate Limiters", "CAP Theorem"],
+    "usefulFor": ["Technical Interviews", "Placements"]
+  },
+  "software-projects": {
+    "subjectName": "Software Projects",
+    "description": "Assemble and deploy robust software systems using clean architectures, testing pipelines, and environment setups.",
+    "estimatedTime": "6 Weeks",
+    "whyImportant": "Applying knowledge to realistic project builds demonstrates execution capability and builds your public portfolio.",
+    "topics": ["Project Requirements", "Architecture & Folder Setup", "Database Schema Integrations", "User Authentication Models", "Unit & Integration Testing", "Docker Containerization", "CI/CD Pipelines", "Documentation & Readmes"],
+    "usefulFor": ["Placements", "Technical Interviews"]
+  },
+  "interview-prep": {
+    "subjectName": "Interview Preparation",
+    "description": "Prepare for technical reviews, coding exercises, resume reviews, and HR behavioral screenings.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "Translates technical skill into job offers. Covers standard resume guidelines, STAR methods, and coding boards.",
+    "topics": ["Resume Design & Metrics", "STAR Method for Behavior", "System Design Case Studies", "Coding Board Practice", "Mock Interviews", "Salary Negotiations", "GitHub Portfolio Polish", "LinkedIn Profile Optimization"],
+    "usefulFor": ["Placements", "Technical Interviews"]
+  },
+  "circuit-analysis": {
+    "subjectName": "Circuit Analysis",
+    "description": "Master circuit theorems, Kirchhoff's laws, AC/DC analysis, and transient response calculations.",
+    "estimatedTime": "5 Weeks",
+    "whyImportant": "It forms the core foundation of all electrical engineering. Essential for analyzing and designing basic analog networks.",
+    "topics": ["Ohm's Law", "Kirchhoff's Current Law", "Kirchhoff's Voltage Law", "Series Circuits", "Parallel Circuits", "Mesh Analysis", "Nodal Analysis", "Superposition Theorem", "Thevenin's Theorem", "Norton's Theorem", "Maximum Power Transfer", "AC Circuits", "Resonance", "Three Phase Circuits", "Power Calculations", "Numericals", "Interview Topics"],
+    "usefulFor": ["Semester Exams", "Placements", "Technical Interviews", "Competitive Exams"]
+  },
+  "digital-logic-design": {
+    "subjectName": "Digital Logic Design",
+    "description": "Learn logic gates, combinational networks, sequential circuits, flip-flops, and FPGA architectures.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "Essential to design digital circuits, microchips, CPU architectures, and program logic controllers.",
+    "topics": ["Binary Codes & Boolean Algebra", "Logic Gates (AND, OR, NOT, Universal)", "Karnaugh Map Minimization", "Multiplexers & Encoders", "Flip-Flops (SR, JK, D, T)", "Registers & Counters", "Finite State Machines (FSM)", "Verilog Fundamentals", "FPGA Implementations"],
+    "usefulFor": ["Semester Exams", "Placements", "Technical Interviews", "Competitive Exams"]
+  },
+  "electrical-machines": {
+    "subjectName": "Electrical Machines",
+    "description": "Understand transformers, DC motors, synchronous machines, and induction motors operating models.",
+    "estimatedTime": "6 Weeks",
+    "whyImportant": "Required to design power plants, factory motors, generators, and work in electricity boards or PSUs.",
+    "topics": ["Magnetic Circuits", "Single-Phase Transformers", "Three-Phase Transformers", "DC Generators", "DC Motors speed control", "Three-Phase Induction Motors", "Synchronous Generators", "Alternator Regulation"],
+    "usefulFor": ["Semester Exams", "Technical Interviews", "Competitive Exams"]
+  },
+  "power-systems-analysis": {
+    "subjectName": "Power Systems Analysis",
+    "description": "Understand generation, transmission lines, load flows, power distribution, and grid protections.",
+    "estimatedTime": "6 Weeks",
+    "whyImportant": "Crucial for working in electrical utilities, power grids, PSUs, and public engineering posts.",
+    "topics": ["Transmission Line Parameters", "Load Flow Studies (Newton-Raphson)", "Symmetrical Fault Analysis", "Unsymmetrical Faults", "Power System Protection & Relays", "Grid Stability (Swing Equation)", "Voltage Control & Reactive Power", "Substation Blueprints"],
+    "usefulFor": ["Semester Exams", "Technical Interviews", "Competitive Exams"]
+  },
+  "control-systems": {
+    "subjectName": "Control Systems",
+    "description": "Learn PID controllers, feedback systems, transfer functions, and frequency stability tests.",
+    "estimatedTime": "5 Weeks",
+    "whyImportant": "Key to industrial automation, robotics, auto-pilots, and manufacturing systems.",
+    "topics": ["Transfer Functions", "Block Diagram Reduction", "Signal Flow Graphs", "Time Response Analysis", "Routh-Hurwitz Stability Criterion", "Root Locus Technique", "Bode Plots", "PID Controller Tuning", "State Space Analysis"],
+    "usefulFor": ["Semester Exams", "Technical Interviews", "Competitive Exams"]
+  },
+  "pcb-design-kicad": {
+    "subjectName": "PCB Design & KiCad",
+    "description": "Learn schematic design, trace routing, footprints placement, high-speed layout rules, and Gerber generation.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "Required to build actual electronics products, physical microcontrollers boards, and work in hardware departments.",
+    "topics": ["KiCad EDA Interface", "Schematic Capture", "Component Footprints Mapping", "PCB Grid & Trace Sizing", "Decoupling Capacitors", "EMI/EMC Shielding", "Multilayer Board Routing", "Gerber File Generation"],
+    "usefulFor": ["Placements", "Technical Interviews"]
+  },
+  "engineering-mathematics": {
+    "subjectName": "Engineering Mathematics",
+    "description": "Master linear algebra, calculus, differential equations, and numerical analysis.",
+    "estimatedTime": "6 Weeks",
+    "whyImportant": "The core mathematical background tested in all public engineering exams (GATE, state PSC, etc.).",
+    "topics": ["Matrix Algebra", "Eigenvalues & Eigenvectors", "Limits, Continuity & Derivative", "Multiple Integrals", "Differential Equations", "Fourier Series & Laplace", "Probability Distributions", "Numerical Methods"],
+    "usefulFor": ["Semester Exams", "Competitive Exams"]
+  },
+  "general-aptitude-reasoning": {
+    "subjectName": "General Aptitude & Reasoning",
+    "description": "Prepare for quantitative aptitude, logical reasoning, verbal competency, and speed arithmetic.",
+    "estimatedTime": "4 Weeks",
+    "whyImportant": "The screening filter section for almost all placement drives and government competitive examinations.",
+    "topics": ["Percentage & Ratio", "Time, Speed & Distance", "Data Interpretation Charts", "Coding Decoding", "Syllogisms & Logic", "Verbal Comprehension", "Permutations & Probability", "Quantitative Mock Sets"],
+    "usefulFor": ["Placements", "Competitive Exams"]
+  },
+  "general-studies-gk": {
+    "subjectName": "General Studies & GK",
+    "description": "Explore history, geography, constitution rules, current events, and economic guidelines.",
+    "estimatedTime": "5 Weeks",
+    "whyImportant": "Crucial scoring sections in administrative services and state electricity boards examinations.",
+    "topics": ["Indian Constitution & Polity", "Basic Economic Concepts", "Indian History & Geography", "General Science Concepts", "Environmental Policies", "Current Affairs", "Public Administration Rules", "State PSC GK specifics"],
+    "usefulFor": ["Competitive Exams"]
+  },
+  "government-exam-projects": {
+    "subjectName": "Government Exam Projects",
+    "description": "Perform structural calculations, substation designs, and program CPU process simulators.",
+    "estimatedTime": "6 Weeks",
+    "whyImportant": "Validates your design engineering understanding before entering public workshops.",
+    "topics": ["Power Grid Voltage stability sheet", "Substation Blueprints CAD design", "CPU Process Scheduler Simulation", "Concrete wall mount casing structural specs", "Highway cross-section drawings", "Irrigation channel flow calculations"],
+    "usefulFor": ["Technical Interviews"]
+  }
+}

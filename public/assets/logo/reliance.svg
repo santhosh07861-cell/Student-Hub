@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="14" fill="#0A2540"/>
+  <!-- Reliance classic red flame symbol -->
+  <path d="M50 15C32 30 20 45 20 62C20 78 33 85 50 85C67 85 80 78 80 62C80 45 68 30 50 15Z" fill="#D93F21"/>
+  <path d="M50 30C38 42 30 53 30 65C30 75 39 80 50 80C61 80 70 75 70 65C70 53 62 42 50 30Z" fill="#F8C300" opacity="0.8"/>
+  <path d="M50 45C44 52 40 60 40 68C40 73 45 76 50 76C55 76 60 73 60 68C60 60 56 52 50 45Z" fill="#ffffff" opacity="0.9"/>
+</svg>

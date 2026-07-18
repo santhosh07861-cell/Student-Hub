@@ -1,0 +1,389 @@
+/* ==========================================================
+   STUDENT HUB SYSTEM-WIDE RESPONSIVE SYSTEM
+   ========================================================== */
+
+/* Global container and scroll prevention */
+html, body, #root, #app-layout {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Base global layout sizing variables */
+:root {
+  --spacing-mobile: 16px;
+  --spacing-tablet: 24px;
+  --spacing-desktop: 32px;
+}
+
+/* ==========================================================
+   Desktop / Laptop (1200px+)
+   ========================================================== */
+@media (min-width: 1200px) {
+  :root {
+    --sidebar-width: 280px;
+  }
+
+  .homepage-container, 
+  .section-header, 
+  .glass-panel, 
+  .grid,
+  .subject-layout-grid,
+  .resume-layout {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  #main-content {
+    margin-left: var(--sidebar-width) !important;
+    padding: var(--spacing-desktop) !important;
+    padding-top: calc(var(--navbar-height) + var(--spacing-desktop)) !important;
+  }
+
+  #navbar {
+    left: var(--sidebar-width) !important;
+    padding: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+  }
+  
+  .navbar-inner {
+    padding-inline: var(--spacing-desktop) !important;
+  }
+
+  /* 3 Cards per row for all grids on Desktop */
+  #scholarships-grid,
+  #internships-grid,
+  #courses-grid,
+  #careers-grid-container,
+  #search-results-grid,
+  .saas-services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    display: grid !important;
+    gap: 24px !important;
+  }
+
+  /* Sidebar expanded and collapsed margin updates */
+  #main-content.sidebar-collapsed {
+    margin-left: 80px !important;
+  }
+  #navbar.sidebar-collapsed {
+    left: 80px !important;
+  }
+}
+
+/* ==========================================================
+   Tablet (768px - 1199px)
+   ========================================================== */
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --sidebar-width: 80px;
+  }
+
+  #main-content {
+    margin-left: var(--sidebar-width) !important;
+    padding: var(--spacing-tablet) !important;
+    padding-top: calc(var(--navbar-height) + var(--spacing-tablet)) !important;
+    gap: var(--spacing-tablet) !important;
+  }
+
+  #main-content.sidebar-expanded {
+    margin-left: 280px !important;
+  }
+
+  #navbar {
+    left: var(--sidebar-width) !important;
+    padding: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+  }
+  
+  .navbar-inner {
+    padding-inline: var(--spacing-tablet) !important;
+  }
+
+  #navbar.sidebar-expanded {
+    left: 280px !important;
+  }
+
+  #sidebar.expanded {
+    width: 280px !important;
+  }
+
+  .sidebar-toggle-btn {
+    display: flex !important;
+  }
+
+  /* 2 Cards per row for all grids on Tablet */
+  #scholarships-grid,
+  #internships-grid,
+  #courses-grid,
+  #careers-grid-container,
+  #search-results-grid,
+  .saas-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    display: grid !important;
+    gap: 24px !important;
+  }
+
+  /* Split layout pages flex stack */
+  .resume-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-tablet) !important;
+  }
+  .resume-preview-pane {
+    position: static !important;
+    max-height: none !important;
+    overflow-x: auto !important;
+  }
+  .resume-sheet-container {
+    zoom: 0.85 !important;
+    margin-inline: auto !important;
+  }
+
+  .settings-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================
+   Mobile (0 - 767px)
+   ========================================================== */
+@media (max-width: 767px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  #sidebar {
+    width: 280px !important;
+  }
+
+  #main-content {
+    margin-left: 0 !important;
+    padding: var(--spacing-mobile) !important;
+    padding-top: calc(var(--navbar-height) + var(--spacing-mobile)) !important;
+    gap: var(--spacing-mobile) !important;
+  }
+
+  #navbar {
+    left: 0 !important;
+    padding: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+  
+  .navbar-inner {
+    padding-inline: var(--spacing-mobile) !important;
+  }
+
+  .sidebar-toggle-btn {
+    display: flex !important;
+  }
+
+  /* 1 Card per row for all grids on Mobile */
+  #scholarships-grid,
+  #internships-grid,
+  #courses-grid,
+  #careers-grid-container,
+  #search-results-grid,
+  .saas-services-grid {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+    gap: 16px !important;
+  }
+
+  /* Hero Section scaling */
+  .hero-container {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: var(--spacing-mobile) 8px !important;
+    gap: var(--spacing-mobile) !important;
+    min-height: auto !important;
+  }
+
+  .hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 2.4rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-description {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-illustration {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: var(--spacing-mobile) !important;
+  }
+
+  .ai-mentor-container {
+    max-width: min(260px, 80vw) !important;
+    height: min(260px, 80vw) !important;
+  }
+
+  .floating-tag {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Position tags closer to the robot on small screens to avoid overflow */
+  .holo-scholarships { top: 10% !important; left: 0px !important; }
+  .holo-internships { top: 40% !important; left: -5px !important; }
+  .holo-courses { top: 70% !important; left: 10px !important; }
+  .holo-roadmaps { top: 5% !important; right: 0px !important; }
+  .holo-resume { top: 35% !important; right: -5px !important; }
+  .holo-assistant { top: 65% !important; right: 10px !important; }
+
+  /* Navbar adaptations */
+  #navbar .search-container-nav {
+    display: none !important;
+  }
+
+  /* Buttons block style on mobile */
+  .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Stack search & filter toolbars vertically */
+  .search-toolbar-panel {
+    grid-template-columns: 1fr !important;
+    padding: var(--spacing-mobile) !important;
+    gap: 16px !important;
+  }
+
+  .filters-container, .filters-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  
+  .search-box-container {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Split layout pages flex stack */
+  .resume-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-mobile) !important;
+  }
+  .resume-preview-pane {
+    position: static !important;
+    max-height: none !important;
+    overflow-x: auto !important;
+    padding: var(--spacing-mobile) !important;
+  }
+  .resume-sheet-container {
+    zoom: 0.52 !important;
+    margin-inline: auto !important;
+  }
+  
+  /* Zoom level fine tuning for smaller screens */
+  @media (max-width: 480px) {
+    .resume-sheet-container {
+      zoom: 0.45 !important;
+    }
+  }
+  @media (max-width: 375px) {
+    .resume-sheet-container {
+      zoom: 0.38 !important;
+    }
+  }
+
+  .settings-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Login / Signup Card paddings */
+  .login-card {
+    padding: 24px !important;
+  }
+  
+  .footer-links-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-tablet) !important;
+    text-align: center !important;
+  }
+
+  /* Scroll tabs horizontally if needed */
+  .scholarship-tabs-container, .internship-tabs-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    margin-bottom: 12px !important;
+  }
+
+  .scholarship-tabs, .internship-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    width: max-content !important;
+    max-width: 100% !important;
+  }
+
+  .scholarship-tabs .tab-btn, .internship-tabs .tab-btn {
+    flex: 0 0 auto !important;
+  }
+
+  /* Roadmaps stats pills */
+  .hero-stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .hero-stat-pill {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Resume builder Header stack controls */
+  .resume-section-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+  
+  .resume-section-header .flex {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .resume-section-header select,
+  .resume-section-header button {
+    width: 100% !important;
+  }
+
+  .ai-banner-section .glass-panel {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 24px !important;
+    gap: 20px !important;
+  }
+  .ai-banner-section .glass-panel button {
+    width: 100% !important;
+  }
+
+  .platform-highlights-section .card,
+  .feature-cards-section .card {
+    padding: 20px !important;
+  }
+  .student-benefits-section .flex {
+    padding: 16px !important;
+  }
+  .student-benefits-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+}

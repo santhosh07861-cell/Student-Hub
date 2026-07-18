@@ -1,0 +1,354 @@
+/* ==========================================================================
+   Subject Details Stylesheet - StudentHub Career Guidance Module
+   ========================================================================== */
+
+/* Subject Header Panel */
+.subject-header-nav-panel {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.back-to-roadmap-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  transition: color var(--transition-fast);
+}
+
+.back-to-roadmap-btn:hover {
+  color: var(--primary);
+}
+
+.back-to-roadmap-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.back-to-roadmap-btn:hover svg {
+  transform: translateX(-4px);
+}
+
+.subject-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subject-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.subject-active-name {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.subject-time-badge {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: var(--radius-round);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+}
+
+.subject-short-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 850px;
+}
+
+/* Layout Grid */
+.subject-layout-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Syllabus Topics Pane */
+.syllabus-topics-pane {
+  padding: 32px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.syllabus-pane-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.02em;
+}
+
+.syllabus-pane-title svg {
+  color: var(--primary);
+}
+
+.syllabus-pane-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Accordion Topics List */
+.topics-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subject-accordion-item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-normal);
+}
+
+.subject-accordion-item:hover {
+  border-color: var(--border-hover);
+}
+
+.subject-accordion-item.active {
+  border-color: var(--primary);
+}
+
+.subject-accordion-header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.subject-accordion-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.topic-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.topic-index-badge {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  transition: all var(--transition-fast);
+}
+
+.subject-accordion-item.active .topic-index-badge {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.topic-title-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.subject-accordion-item.active .topic-title-text {
+  color: var(--text-primary);
+}
+
+.subject-accordion-icon {
+  transition: transform var(--transition-fast);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.subject-accordion-item.active .subject-accordion-icon {
+  transform: rotate(90deg);
+  color: var(--primary);
+}
+
+.subject-accordion-panel {
+  display: none;
+  background: rgba(0, 0, 0, 0.15);
+  border-top: 1px solid var(--border-color);
+}
+
+.subject-accordion-item.active .subject-accordion-panel {
+  display: block;
+}
+
+.subject-accordion-panel-content {
+  padding: 20px 24px;
+}
+
+.no-subtopics-msg {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Bullet list of topics to study */
+.subtopics-bullets-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.subtopics-bullets-list li {
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Right Utility Pane widgets */
+.subject-utility-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.utility-meta-card {
+  padding: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.utility-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.utility-card-title svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.utility-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Useful for badges */
+.useful-for-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.useful-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-round);
+  padding: 6px 14px;
+}
+
+/* Warning alert card styling */
+.notice-highlight-card {
+  border-left: 4px solid var(--warning) !important;
+  background: rgba(245, 158, 11, 0.02);
+}
+
+.notice-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--warning);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.notice-title svg {
+  color: var(--warning);
+}
+
+.notice-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* RESPONSIVE LAYOUT ADJUSTMENTS */
+@media (max-width: 1200px) {
+  .subject-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden !important;
+  }
+  .subject-layout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .btn, select, .back-to-roadmap-btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-active-name {
+    font-size: 1.75rem !important;
+  }
+  
+  .syllabus-topics-pane {
+    padding: 20px !important;
+  }
+  
+  .subject-accordion-header {
+    padding: 14px 16px !important;
+  }
+}

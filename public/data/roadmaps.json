@@ -1,0 +1,480 @@
+[
+  {
+    "id": "software-engineer",
+    "careerName": "Software Engineer",
+    "description": "Master computer science fundamentals, data structures, algorithms, and software design principles.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Software Engineer", "Systems Engineer", "MTS", "Software Developer"],
+    "skills": ["Python/Java/C++", "DSA", "SQL & Databases", "System Design", "Git & GitHub"],
+    "steps": [
+      "programming-fundamentals",
+      "data-structures-algorithms",
+      "sql-databases",
+      "operating-systems",
+      "computer-networks",
+      "object-oriented-programming",
+      "system-design",
+      "software-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "full-stack-developer",
+    "careerName": "Full Stack Developer",
+    "description": "Bridge client and server development using modern Javascript/Typescript frameworks and database systems.",
+    "estimatedTime": "9 Months",
+    "jobRoles": ["Full Stack Engineer", "MERN Developer", "SaaS Developer", "Web Application Developer"],
+    "skills": ["JavaScript/React", "Node.js/Express", "Databases (SQL & NoSQL)", "HTML5 & CSS3 layouts", "Git & Docker"],
+    "steps": [
+      "programming-fundamentals",
+      "web-basics-html-css",
+      "frontend-frameworks-react",
+      "backend-apis-node",
+      "sql-databases",
+      "nosql-databases-mongodb",
+      "system-design",
+      "fullstack-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "java-developer",
+    "careerName": "Java Developer",
+    "description": "Deep dive into JVM internals, Spring Boot microservices, enterprise design patterns, and multithreading.",
+    "estimatedTime": "7 Months",
+    "jobRoles": ["Java Backend Engineer", "Spring Developer", "JVM Specialist", "Enterprise App Developer"],
+    "skills": ["Core Java SE", "Spring Boot", "JPA/Hibernate ORM", "SQL & Relational DBs", "Docker & Maven"],
+    "steps": [
+      "programming-fundamentals",
+      "object-oriented-programming",
+      "java-concurrency-jvm",
+      "sql-databases",
+      "spring-boot-essentials",
+      "microservices-architecture",
+      "system-design",
+      "java-enterprise-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "python-developer",
+    "careerName": "Python Developer",
+    "description": "Master clean coding in Python, backend development with Django/FastAPI, automation scripting, and database integrations.",
+    "estimatedTime": "6 Months",
+    "jobRoles": ["Python Backend Engineer", "FastAPI Developer", "Django Web Developer", "Automation Engineer"],
+    "skills": ["Python SE Core", "Django/FastAPI", "SQL & ORMs", "Asynchronous Programming", "Git & CI/CD"],
+    "steps": [
+      "programming-fundamentals",
+      "object-oriented-programming",
+      "python-advanced-concurrency",
+      "sql-databases",
+      "django-fastapi-frameworks",
+      "api-design-testing",
+      "system-design",
+      "python-backend-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "frontend-developer",
+    "careerName": "Frontend Developer",
+    "description": "Build high-performance, responsive user interfaces. Master HTML, CSS, JavaScript, and React/Vue ecosystems.",
+    "estimatedTime": "6 Months",
+    "jobRoles": ["Frontend Engineer", "UI Developer", "React Developer", "Web Designer"],
+    "skills": ["HTML5 & Semantic Web", "CSS3 Grid/Flexbox", "JavaScript ES6+", "React.js/Next.js", "Web Performance"],
+    "steps": [
+      "web-basics-html-css",
+      "programming-fundamentals",
+      "advanced-javascript-dom",
+      "frontend-frameworks-react",
+      "state-management-apis",
+      "css-processors-tailwind",
+      "web-performance-seo",
+      "frontend-portfolio-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "backend-developer",
+    "careerName": "Backend Developer",
+    "description": "Build scalable backend APIs, database architectures, authentication systems, and cloud-hosted microservices.",
+    "estimatedTime": "7 Months",
+    "jobRoles": ["Backend Engineer", "API Developer", "Database Developer", "Systems Architect"],
+    "skills": ["Node.js/Express/Python", "SQL & NoSQL DBs", "REST, gRPC & WebSockets", "Docker & Caching", "System Design"],
+    "steps": [
+      "programming-fundamentals",
+      "object-oriented-programming",
+      "backend-apis-node",
+      "sql-databases",
+      "nosql-databases-mongodb",
+      "caching-redis-queues",
+      "system-design",
+      "backend-scale-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "ai-engineer",
+    "careerName": "AI Engineer",
+    "description": "Build, deploy, and integrate AI models, neural networks, large language models (LLMs), and computer vision pipelines.",
+    "estimatedTime": "9 Months",
+    "jobRoles": ["AI Engineer", "GenAI Developer", "NLP Engineer", "Machine Learning Integrator"],
+    "skills": ["Python Core", "PyTorch/TensorFlow", "LangChain & Agents", "Vector Databases", "Prompt Engineering"],
+    "steps": [
+      "programming-fundamentals",
+      "statistics-probability",
+      "math-for-ml",
+      "machine-learning-algorithms",
+      "deep-learning-neural-nets",
+      "natural-language-processing",
+      "generative-ai-llms",
+      "ai-engineering-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "machine-learning-engineer",
+    "careerName": "Machine Learning Engineer",
+    "description": "Focus on productionizing machine learning systems, optimizing ML pipelines, and designing scalable training/inference architectures.",
+    "estimatedTime": "9 Months",
+    "jobRoles": ["Machine Learning Engineer", "MLOps Engineer", "Data Engineer", "Inference Specialist"],
+    "skills": ["Python Programming", "PyTorch/TensorFlow", "MLflow/DVC pipeline", "Docker & Kubernetes", "SQL Data Systems"],
+    "steps": [
+      "programming-fundamentals",
+      "statistics-probability",
+      "math-for-ml",
+      "machine-learning-algorithms",
+      "deep-learning-neural-nets",
+      "ml-pipelines-mlops",
+      "model-deployment-scaling",
+      "ml-engineering-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "data-scientist",
+    "careerName": "Data Scientist",
+    "description": "Extract insights from complex data, design statistical models, build prediction engines, and present business decisions.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Data Scientist", "Statistical Researcher", "Quant Analyst", "Decision Scientist"],
+    "skills": ["Python & R", "Statistics & Probability", "SQL Queries", "Machine Learning", "Data Visualization"],
+    "steps": [
+      "programming-fundamentals",
+      "statistics-probability",
+      "data-wrangling-pandas",
+      "sql-databases",
+      "machine-learning-algorithms",
+      "data-visualization-bi",
+      "experimental-ab-testing",
+      "data-science-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "data-analyst",
+    "careerName": "Data Analyst",
+    "description": "Transform raw datasets into actionable insights. Master SQL querying, spreadsheet calculations, and dashboard visualization tools.",
+    "estimatedTime": "5 Months",
+    "jobRoles": ["Data Analyst", "Business Intelligence Analyst", "Reporting Analyst", "SQL Developer"],
+    "skills": ["SQL Joins & CTEs", "Excel Analytics", "Power BI / Tableau", "Python Basics", "Data Cleaning"],
+    "steps": [
+      "spreadsheet-analytics",
+      "sql-databases",
+      "data-cleaning-wrangling",
+      "data-visualization-bi",
+      "reporting-kpi-dashboards",
+      "python-for-analytics",
+      "data-analyst-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "cloud-engineer",
+    "careerName": "Cloud Engineer",
+    "description": "Design, deploy, and manage cloud infrastructures. Master AWS, GCP, Azure, Terraform, and cloud networking.",
+    "estimatedTime": "7 Months",
+    "jobRoles": ["Cloud Engineer", "Cloud Solutions Architect", "AWS SysOps", "Infrastructure Engineer"],
+    "skills": ["AWS/Azure/GCP", "Infrastructure as Code", "Linux Commands", "Cloud Networking", "Docker Containers"],
+    "steps": [
+      "linux-basics-networking",
+      "cloud-computing-aws",
+      "infrastructure-as-code-terraform",
+      "containerization-docker",
+      "cloud-security-iam",
+      "serverless-architecture",
+      "cloud-deployment-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "devops-engineer",
+    "careerName": "DevOps Engineer",
+    "description": "Automate software delivery pipelines, manage server systems, and build scalable infrastructure networks.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["DevOps Engineer", "Site Reliability Engineer (SRE)", "Release Engineer", "Platform Engineer"],
+    "skills": ["Linux & Shell Scripting", "CI/CD Systems", "Docker & Kubernetes", "Terraform IaC", "Telemetry & Monitoring"],
+    "steps": [
+      "linux-basics-networking",
+      "containerization-docker",
+      "ci-cd-pipelines",
+      "infrastructure-as-code-terraform",
+      "orchestration-kubernetes",
+      "monitoring-telemetry",
+      "devops-automation-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "cyber-security-engineer",
+    "careerName": "Cyber Security Engineer",
+    "description": "Protect company networks, applications, and cloud infrastructures. Master penetration testing, threat hunting, and security compliance.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Cybersecurity Engineer", "Security Analyst", "Penetration Tester", "Information Security Officer"],
+    "skills": ["Network Security Protocols", "Linux OS Systems", "Cryptography Schemes", "Metasploit Testing", "OWASP Web Hacking"],
+    "steps": [
+      "linux-basics-networking",
+      "cryptography-fundamentals",
+      "network-security-firewalls",
+      "web-app-security-owasp",
+      "penetration-testing-metasploit",
+      "threat-hunting-forensics",
+      "cyber-security-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "android-developer",
+    "careerName": "Android Developer",
+    "description": "Build modern mobile applications for Android systems. Master Kotlin programming, Android SDK, Jetpack Compose, and API integrations.",
+    "estimatedTime": "6 Months",
+    "jobRoles": ["Android Engineer", "Mobile App Developer", "Kotlin Developer", "Android SDK Developer"],
+    "skills": ["Kotlin Programming", "Android Studio & SDK", "Jetpack Compose UI", "Local DB (Room)", "RESTful APIs Hooking"],
+    "steps": [
+      "programming-fundamentals",
+      "object-oriented-programming",
+      "kotlin-mobile-programming",
+      "android-studio-sdk-basics",
+      "jetpack-compose-ui",
+      "local-storage-room-db",
+      "android-portfolio-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "ui-ux-designer",
+    "careerName": "UI UX Designer",
+    "description": "Design beautiful, functional, and user-centric interfaces. Master Figma, wireframing, prototyping, and user research.",
+    "estimatedTime": "5 Months",
+    "jobRoles": ["UI/UX Designer", "Product Designer", "Interaction Designer", "User Researcher"],
+    "skills": ["Figma Prototyping", "Wireframing & Spacing", "User Research Models", "Design Systems Layout", "Visual Hierarchy"],
+    "steps": [
+      "visual-design-principles",
+      "user-research-personas",
+      "wireframing-prototyping",
+      "figma-mastery",
+      "interaction-design",
+      "design-systems",
+      "ui-ux-portfolio-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "electrical-engineer",
+    "careerName": "Electrical Engineer",
+    "description": "Design circuits, power distribution setups, electric systems, and microcontrollers. Understand electrical grids and calculations.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Electrical Engineer", "Power Systems Engineer", "Control Panel Designer", "Electrical Site Inspector"],
+    "skills": ["Circuit Analysis", "MATLAB Simulation", "Power System Analysis", "KiCad PCB Design", "Electrical Machinery Code"],
+    "steps": [
+      "circuit-analysis",
+      "digital-logic-design",
+      "electrical-machines",
+      "power-systems-analysis",
+      "control-systems",
+      "pcb-design-kicad",
+      "electrical-design-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "electronics-engineer",
+    "careerName": "Electronics Engineer",
+    "description": "Design microelectronic systems, analog/digital circuits, semiconductor devices, and communication chips.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Electronics Engineer", "Hardware Engineer", "Analog Designer", "Semiconductor Specialist"],
+    "skills": ["Analog Filter Design", "Digital Logic CMOS", "EDA tools (Altium/KiCad)", "Microcontroller periphery", "Verilog HDL"],
+    "steps": [
+      "digital-logic-design",
+      "circuit-analysis",
+      "semiconductor-devices",
+      "analog-circuits",
+      "microcontrollers-peripherals",
+      "verilog-hdl-design",
+      "electronics-design-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "mechanical-engineer",
+    "careerName": "Mechanical Engineer",
+    "description": "Design machine parts, engines, and structural components. Master CAD tools (SolidWorks/AutoCAD), thermodynamics, and product testing.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Mechanical Engineer", "CAD Designer", "HVAC Design Engineer", "Product Testing Engineer"],
+    "skills": ["SolidWorks/AutoCAD 3D", "Thermodynamics Cycle", "Statics & Fluid Dynamics", "FEA Analysis (ANSYS)", "Geometric Tolerancing (GD&T)"],
+    "steps": [
+      "mechanical-statics-dynamics",
+      "thermodynamics-fluids",
+      "cad-modeling-solidworks",
+      "machine-design-elements",
+      "finite-element-analysis",
+      "geometric-dimensioning-tolerancing",
+      "mechanical-design-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "civil-engineer",
+    "careerName": "Civil Engineer",
+    "description": "Design infrastructure, bridges, roads, and buildings. Master structural designs, concrete technology, surveying, and AutoCAD/STAAD Pro.",
+    "estimatedTime": "9 Months",
+    "jobRoles": ["Civil Engineer", "Structural Designer", "Site Engineer", "Construction Manager"],
+    "skills": ["AutoCAD Civil 3D/Revit", "STAAD Pro Analysis", "Concrete Tech Mixes", "Soil Geotechnics", "Surveying total station"],
+    "steps": [
+      "structural-mechanics-statics",
+      "concrete-technology-mixes",
+      "geotechnical-engineering-soils",
+      "highway-transportation-systems",
+      "cad-drafting-autocad",
+      "structural-analysis-staad",
+      "civil-design-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "embedded-systems-engineer",
+    "careerName": "Embedded Systems Engineer",
+    "description": "Bridge the gap between hardware and software. Program microcontrollers, write real-time firmware, and design PCB boards.",
+    "estimatedTime": "8 Months",
+    "jobRoles": ["Embedded Systems Engineer", "Firmware Engineer", "Microcontroller Programmer", "IoT Developer"],
+    "skills": ["Embedded C/C++", "Registers & GPIOs", "Real-Time OS (FreeRTOS)", "SPI/I2C/UART", "PCB layout designs"],
+    "steps": [
+      "programming-fundamentals",
+      "microcontrollers-peripherals",
+      "embedded-c-programming",
+      "serial-protocols-interfacing",
+      "real-time-operating-systems",
+      "pcb-design-kicad",
+      "embedded-system-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "plc-scada-engineer",
+    "careerName": "PLC & SCADA Engineer",
+    "description": "Design and program industrial automation systems. Master PLC programming (Ladder Logic, FBD), SCADA HMI designs, and factory networking.",
+    "estimatedTime": "7 Months",
+    "jobRoles": ["Automation Engineer", "PLC Programmer", "SCADA Design Analyst", "Commissioning Engineer"],
+    "skills": ["Ladder Logic & Function blocks", "Ignition/WinCC SCADA HMIs", "Industrial Networks (Modbus)", "Sensors & Actuators loops", "Safety lockouts LOTO"],
+    "steps": [
+      "industrial-wiring-controls",
+      "plc-ladder-logic-programming",
+      "scada-hmi-design",
+      "industrial-networks-modbus",
+      "analog-scaling-pid",
+      "industrial-safety-loto",
+      "automation-panel-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "government-jobs-eee",
+    "careerName": "Government Jobs (EEE)",
+    "description": "Prepare for public sector undertaking (PSU) exams, state electricity boards, and civil services. Master power systems and electrical machinery.",
+    "estimatedTime": "12 Months",
+    "jobRoles": ["Assistant Engineer (Electrical)", "Technical Officer", "PSU Executive Trainee", "Section Engineer"],
+    "skills": ["Power Systems Protection", "Electrical Machines", "General Aptitude Test", "General Studies & GK", "Past Exam solvers"],
+    "steps": [
+      "engineering-mathematics",
+      "circuit-analysis",
+      "electrical-machines",
+      "power-systems-analysis",
+      "general-aptitude-reasoning",
+      "general-studies-gk",
+      "government-exam-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "government-jobs-cse",
+    "careerName": "Government Jobs (CSE)",
+    "description": "Prepare for technical posts in government organizations like NIC, ISRO, DRDO, and PSU engineering exams.",
+    "estimatedTime": "10 Months",
+    "jobRoles": ["Scientist (DRDO/ISRO)", "Technical Assistant (NIC)", "IT Officer", "Assistant Engineer (IT)"],
+    "skills": ["Algorithms & DSA", "Computer Networks", "Database Management", "OS Concepts", "General Aptitude Test"],
+    "steps": [
+      "engineering-mathematics",
+      "programming-fundamentals",
+      "data-structures-algorithms",
+      "sql-databases",
+      "operating-systems",
+      "computer-networks",
+      "general-aptitude-reasoning",
+      "government-exam-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "government-jobs-ece",
+    "careerName": "Government Jobs (ECE)",
+    "description": "Prepare for technical jobs in telecom boards, defense labs, and state PSC exams. Master signals and semiconductor devices.",
+    "estimatedTime": "10 Months",
+    "jobRoles": ["Telecom Engineer (BSNL)", "Scientific Officer", "Assistant Engineer (Electronics)"],
+    "skills": ["Signals & Systems", "Analog/Digital Communication", "Electromagnetics & Antennas", "Microcontrollers", "General Aptitude Test"],
+    "steps": [
+      "engineering-mathematics",
+      "digital-logic-design",
+      "semiconductor-devices",
+      "analog-circuits",
+      "general-aptitude-reasoning",
+      "general-studies-gk",
+      "government-exam-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "government-jobs-mechanical",
+    "careerName": "Government Jobs (Mechanical)",
+    "description": "Prepare for technical posts in Railways, PSUs, Defense production plants, and state public works departments.",
+    "estimatedTime": "12 Months",
+    "jobRoles": ["Assistant Engineer (Mechanical)", "Junior Engineer (Railways)", "PSU Mechanical Trainee"],
+    "skills": ["Thermodynamics Cycle", "Fluid Mechanics flow", "Machine Design stress", "General Aptitude Test", "Past Exam solvers"],
+    "steps": [
+      "engineering-mathematics",
+      "mechanical-statics-dynamics",
+      "thermodynamics-fluids",
+      "machine-design-elements",
+      "general-aptitude-reasoning",
+      "general-studies-gk",
+      "government-exam-projects",
+      "interview-prep"
+    ]
+  },
+  {
+    "id": "government-jobs-civil",
+    "careerName": "Government Jobs (Civil)",
+    "description": "Prepare for civil engineer vacancies in PWD, Municipal Corporations, Water boards, and national infrastructure projects.",
+    "estimatedTime": "12 Months",
+    "jobRoles": ["Assistant Engineer (Civil)", "PWD Site Inspector", "Municipal Assistant", "Water Board Engineer"],
+    "skills": ["Structural Mechanics Statics", "Concrete Technology Mixes", "Soil Geotechnics bearings", "General Aptitude Test", "PWD Code Guidelines"],
+    "steps": [
+      "engineering-mathematics",
+      "structural-mechanics-statics",
+      "concrete-technology-mixes",
+      "geotechnical-engineering-soils",
+      "general-aptitude-reasoning",
+      "general-studies-gk",
+      "government-exam-projects",
+      "interview-prep"
+    ]
+  }
+]

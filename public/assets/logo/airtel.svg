@@ -1,0 +1,5 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="14" fill="#ffffff"/>
+  <!-- Airtel classic red shape loop -->
+  <path d="M50 20C33 20 20 33 20 50C20 67 33 80 50 80C67 80 75 68 75 58C75 48 68 45 60 45C52 45 48 48 45 52C42 56 38 60 33 60C28 60 25 56 25 50C25 36 36 28 50 28C64 28 75 36 75 50H82C82 33 67 20 50 20Z" fill="#e31b23"/>
+</svg>

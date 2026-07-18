@@ -1,0 +1,62 @@
+[
+  {
+    "id": "internship-1",
+    "companyName": "Google",
+    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "role": "Software Engineering Intern, BS",
+    "mode": "Hybrid",
+    "location": "Mountain View, CA, USA",
+    "duration": "12-14 Weeks",
+    "skills": ["C++", "Java", "Python", "Data Structures", "Algorithms"],
+    "officialApplyLink": "https://careers.google.com/jobs/results/",
+    "officialWebsite": "https://careers.google.com"
+  },
+  {
+    "id": "internship-2",
+    "companyName": "Microsoft",
+    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+    "role": "Software Engineering Intern",
+    "mode": "Onsite",
+    "location": "Redmond, WA, USA",
+    "duration": "12 Weeks",
+    "skills": ["C#", "C++", "TypeScript", "Cloud Systems"],
+    "officialApplyLink": "https://careers.microsoft.com/us/en",
+    "officialWebsite": "https://careers.microsoft.com"
+  },
+  {
+    "id": "internship-3",
+    "companyName": "Meta",
+    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg",
+    "role": "Software Engineer Intern",
+    "mode": "Hybrid",
+    "location": "London, United Kingdom",
+    "duration": "12 Weeks",
+    "skills": ["Python", "PHP", "React", "Systems Architecture"],
+    "officialApplyLink": "https://www.metacareers.com/jobs",
+    "officialWebsite": "https://www.metacareers.com"
+  },
+  {
+    "id": "internship-4",
+    "companyName": "NVIDIA",
+    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg",
+    "role": "Deep Learning Software Intern",
+    "mode": "Hybrid",
+    "location": "Santa Clara, CA, USA",
+    "duration": "16 Weeks",
+    "skills": ["PyTorch", "TensorFlow", "CUDA", "C++", "Python"],
+    "officialApplyLink": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
+    "officialWebsite": "https://www.nvidia.com"
+  },
+  {
+    "id": "internship-5",
+    "companyName": "Apple",
+    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "role": "Hardware Engineering Intern",
+    "mode": "Onsite",
+    "location": "Cupertino, CA, USA",
+    "duration": "6 Months",
+    "skills": ["Verilog", "SystemVerilog", "Python", "Computer Architecture"],
+    "officialApplyLink": "https://www.apple.com/careers/us/",
+    "officialWebsite": "https://www.apple.com/careers/"
+  }
+]

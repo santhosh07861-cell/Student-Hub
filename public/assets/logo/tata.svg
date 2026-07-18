@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="14" fill="#005a9c"/>
+  <!-- Tata white arch logo -->
+  <path d="M50 15C33 15 22 28 22 45C22 55 27 65 35 71L40 65C34 60 30 53 30 45C30 32 39 23 50 23C61 23 70 32 70 45C70 53 66 60 60 65L65 71C73 65 78 55 78 45C78 28 67 15 50 15Z" fill="#ffffff"/>
+  <path d="M46 35H54V65H46V35Z" fill="#ffffff"/>
+  <path d="M35 35H65V42H35V35Z" fill="#ffffff"/>
+</svg>

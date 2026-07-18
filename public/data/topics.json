@@ -1,0 +1,146 @@
+{
+  "programming-fundamentals": {
+    "Variables": ["Variable Declaration and Initialization", "Scope rules (Local, Global, Block)", "Memory Allocation (Stack vs Heap)", "Constants and Final modifiers"],
+    "Data Types": ["Primitive Types (Integer, Floating Point, Character, Boolean)", "Reference Types (Class, Interface, Array)", "Implicit & Explicit Type Casting", "Wrapper Classes"],
+    "Operators": ["Arithmetic & Relational Operators", "Logical & Bitwise Operators", "Unary & Ternary Operators", "Operator Precedence and Associativity"],
+    "Input Output": ["Standard Console Input Output", "Formatted Output", "File Streams basics", "Scanner and BufferedReader classes"],
+    "Conditional Statements": ["If-Else conditional logic", "Nested If structures", "Switch-Case statements", "Fallthrough conditions"],
+    "Loops": ["While Loop operations", "Do-While Loop boundaries", "For Loop declarations", "Enhanced For (Foreach) operations", "Break and Continue controls"],
+    "Functions": ["Function Declaration and Syntax", "Arguments and Return types", "Call by Value vs Call by Reference", "Recursion concepts", "Method Overloading"],
+    "Arrays": ["Single-dimensional Arrays", "Multi-dimensional Arrays", "Array Initialization & Bounds", "Array Searching and Sorting basics"],
+    "Strings": ["String immutable nature", "String Buffer vs String Builder", "String functions (substring, indexOf, equals)", "String Constant Pool"],
+    "Object Oriented Programming": ["Classes & Objects concepts", "Encapsulation & Access Modifiers", "Inheritance & Polymorphism", "Abstraction & Interfaces"],
+    "Exception Handling": ["Try-Catch-Finally statements", "Throw vs Throws keywords", "Checked vs Unchecked Exceptions", "Custom Exception Classes"],
+    "Collections Framework": ["List Interface (ArrayList, LinkedList)", "Set Interface (HashSet, TreeSet)", "Map Interface (HashMap, TreeMap)", "Iterators & Generics"],
+    "File Handling": ["File Readers and Writers", "File Stream byte operations", "Serialization & Deserialization", "Directory manipulation"],
+    "Multithreading": ["Thread Lifecycle", "Runnable Interface vs Thread class", "Thread Synchronization", "Inter-thread communication"]
+  },
+  "data-structures-algorithms": {
+    "Arrays": ["1D and 2D Array operations", "Two Pointer technique", "Sliding Window problems", "Prefix Sum techniques"],
+    "Strings": ["Pattern Matching (KMP, Rabin-Karp)", "Anagram & Palindrome verification", "String Manipulation algorithms"],
+    "Linked Lists": ["Singly Linked List", "Doubly Linked List", "Circular Linked List", "Cycle Detection (Floyd's algorithm)", "Reversing a Linked List"],
+    "Stack": ["LIFO structure & Push/Pop", "Infix, Prefix, and Postfix notations", "Expression Evaluation", "Monotonic Stack problems"],
+    "Queue": ["FIFO structure", "Circular Queue", "Priority Queue (Min/Max Heap)", "Deque (Double Ended Queue)"],
+    "Hashing": ["Hash Functions & Collision resolution", "Chaining vs Open Addressing", "HashMap & HashSet implementations"],
+    "Trees": ["Binary Tree representation", "Traversals (Inorder, Preorder, Postorder)", "Level Order (BFS) traversal", "Binary Search Tree (BST) operations", "AVL Trees & Self-balancing"],
+    "Graphs": ["Adjacency Matrix & List representation", "Depth First Search (DFS)", "Breadth First Search (BFS)", "Dijkstra's Shortest Path", "Minimum Spanning Tree (Kruskal, Prim)", "Topological Sorting"],
+    "Heap": ["Heap Property (Max/Min Heap)", "Heapify operations", "Heapsort algorithm", "K-way Merge problems"],
+    "Recursion": ["Base Case & Stack overflow", "Tail Recursion", "Tower of Hanoi problem", "Solving Recurrence relations"],
+    "Backtracking": ["N-Queens puzzle", "Sudoku solver", "Permutations & Subsets generation"],
+    "Greedy Algorithms": ["Fractional Knapsack", "Activity Selection problem", "Huffman Coding"],
+    "Dynamic Programming": ["Memoization (Top-down) vs Tabulation (Bottom-up)", "0/1 Knapsack problem", "Longest Common Subsequence (LCS)", "Matrix Chain Multiplication"]
+  },
+  "sql-databases": {
+    "Database Basics": ["Relational Model principles", "Primary, Foreign, & Composite Keys", "DBMS vs RDBMS architectures"],
+    "ER Diagram": ["Entities, Attributes, and Relationships", "Cardinality and Modality", "Converting ER to Relational Tables"],
+    "Normalization": ["Functional Dependency", "1NF, 2NF, 3NF specifications", "Boyce-Codd Normal Form (BCNF)", "Anomaly prevention"],
+    "SELECT": ["Retrieving fields", "Aliasing tables & columns", "DISTINCT clause"],
+    "WHERE": ["Comparison Operators", "AND, OR, NOT logic", "LIKE and BETWEEN conditions", "Handling NULL values"],
+    "ORDER BY": ["Ascending and Descending sort", "Sorting by multiple columns"],
+    "GROUP BY": ["Aggregation columns", "SUM, AVG, MIN, MAX, COUNT"],
+    "HAVING": ["Filtering group aggregates", "WHERE vs HAVING execution order"],
+    "JOIN": ["Inner Join mechanics", "Left, Right, and Full Outer Joins", "Self Joins & Cross Joins"],
+    "Subqueries": ["Scalar Subqueries", "Correlated Subqueries", "EXISTS and IN clauses"],
+    "Views": ["Creating and updating Views", "Materialized Views"],
+    "Indexes": ["B-Tree and Hash Indexing", "Clustered vs Non-Clustered Indexes", "Query optimization using index scans"],
+    "Stored Procedures": ["Writing Procedures & Functions", "Input/Output parameters", "Triggers syntax"],
+    "Transactions": ["ACID Properties", "COMMIT & ROLLBACK controls", "Transaction Isolation Levels", "Concurrency locks"]
+  },
+  "operating-systems": {
+    "OS Processes": ["Process Control Block (PCB)", "Process states & Transitions", "Inter-Process Communication (IPC)"],
+    "Threads & Concurrency": ["User vs Kernel Threads", "Multi-threading Models", "Race Conditions"],
+    "CPU Scheduling": ["First-Come-First-Serve (FCFS)", "Shortest Job First (SJF)", "Round Robin (RR) scheduling", "Priority Scheduling"],
+    "Mutexes & Semaphores": ["Critical Section Problem", "Peterson's Solution", "Binary vs Counting Semaphores", "Producer-Consumer problem"],
+    "Virtual Memory": ["Demand Paging", "Page Table entries", "Translation Lookaside Buffer (TLB)"],
+    "Paging & Segmentation": ["Internal vs External Fragmentation", "Page Allocation policies", "Page Replacement (FIFO, LRU, Optimal)"],
+    "File Systems": ["File Allocation methods (Indexed, Linked)", "Directory Structures", "Disk Scheduling (FCFS, SSTF, SCAN)"],
+    "Deadlock Prevention": ["Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait", "Banker's Safety Algorithm", "Deadlock Detection & Recovery"]
+  },
+  "computer-networks": {
+    "OSI Reference Model": ["7 Layers and functions", "Encapsulation & Decapsulation", "Headers and payloads"],
+    "TCP/IP Protocol Stack": ["4 Layers mapping to OSI", "TCP/IP Protocol Suites"],
+    "IP Addressing & Subnetting": ["IPv4 vs IPv6 formats", "Classful vs Classless (CIDR) addressing", "Subnet Mask calculations"],
+    "Routing Algorithms": ["Link State routing (OSPF)", "Distance Vector routing (RIP)", "Border Gateway Protocol (BGP)"],
+    "DNS & HTTP/HTTPS": ["Domain Name System hierarchy", "HTTP Request/Response cycle", "SSL/TLS cryptographic handshakes"],
+    "Sockets & TCP Handshake": ["TCP 3-Way Handshake", "TCP Connection Teardown", "Port numbering & socket bindings"],
+    "Load Balancers": ["Layer 4 vs Layer 7 load balancing", "Round Robin, Least Connection routing"],
+    "Network Firewalls": ["Packet Filtering", "Stateful Inspection", "NAT (Network Address Translation)"]
+  },
+  "object-oriented-programming": {
+    "Classes & Objects": ["Class definition", "Instantiating Objects", "Constructors & Destructors", "This/Self keyword"],
+    "Encapsulation": ["Data Hiding", "Getters and Setters", "Access Modifiers (Public, Private, Protected, Default)"],
+    "Inheritance": ["Single, Multiple, Multi-level, Hierarchical Inheritance", "Super keyword", "Is-A relationship"],
+    "Polymorphism": ["Method Overloading (Compile-time)", "Method Overriding (Runtime)", "Dynamic Method Dispatch"],
+    "Abstraction & Interfaces": ["Abstract Classes vs Interfaces", "Multiple inheritance using interfaces", "Loose coupling"],
+    "SOLID Principles": ["Single Responsibility", "Open-Closed", "Liskov Substitution", "Interface Segregation", "Dependency Inversion"],
+    "Design Patterns": ["Singleton Pattern", "Factory Pattern", "Observer Pattern", "Strategy Pattern"]
+  },
+  "system-design": {
+    "Load Balancing": ["Algorithms (Round Robin, Consistent Hashing)", "Hardware vs Software load balancers", "DNS Round Robin"],
+    "Consistent Hashing": ["Ring Topology", "Virtual Nodes", "Data redistribution on node add/remove"],
+    "Database Sharding & Replication": ["Horizontal Sharding vs Vertical Partitioning", "Leader-Follower replication", "Multi-Leader replication"],
+    "Caching Strategies": ["Write-Through vs Write-Back vs Cache-Aside", "Eviction policies (LRU, LFU)", "CDN caching"],
+    "Microservices Architecture": ["Monolith vs Microservices", "API Gateways", "Service Discovery (Eureka, Consul)"],
+    "Message Brokers": ["Publish-Subscribe models", "Kafka partitioning & Consumer Groups", "RabbitMQ exchanges"],
+    "Rate Limiters": ["Token Bucket, Leaky Bucket algorithms", "Distributed rate limiting", "API Gateways integration"],
+    "CAP Theorem": ["Consistency, Availability, Partition Tolerance", "PACELC theorem"]
+  },
+  "circuit-analysis": {
+    "Ohm's Law": ["Voltage, Current, and Resistance relation", "Linearity & limits"],
+    "Kirchhoff's Laws": ["KCL (Charge conservation at node)", "KVL (Energy conservation around loop)"],
+    "Circuits Layout": ["Resistors in Series & Parallel", "Voltage Divider Rule", "Current Divider Rule"],
+    "Mesh Analysis": ["Loop currents", "Writing loop matrix equations", "Supermesh condition"],
+    "Nodal Analysis": ["Node voltages", "Writing node matrix equations", "Supernode condition"],
+    "Network Theorems": ["Superposition Theorem (Linear networks)", "Thevenin's Theorem (Equivalent voltage & resistance)", "Norton's Theorem (Equivalent current & resistance)", "Maximum Power Transfer (Impedance matching)"],
+    "AC Circuits": ["Sinusoidal steady-state", "Phasor representations", "Impedance and Admittance", "Active, Reactive, and Apparent Power"],
+    "Resonance": ["Series Resonance (Minimum impedance)", "Parallel Resonance (Maximum impedance)", "Quality Factor & Bandwidth"],
+    "Three Phase Circuits": ["Star vs Delta connections", "Line and Phase voltages/currents", "Three Phase Power measurements"]
+  },
+  "digital-logic-design": {
+    "Binary & Boolean": ["Number Systems conversions", "Boolean Theorems", "De Morgan's Laws"],
+    "Logic Gates": ["AND, OR, NOT operations", "NAND, NOR Universal Gates", "XOR, XNOR parity check"],
+    "Karnaugh Map": ["2, 3, and 4 Variable Maps", "Prime Implicants extraction", "Don't Care conditions"],
+    "Combinational Circuits": ["Adders & Subtractors", "Multiplexers & Demultiplexers", "Encoders & Decoders"],
+    "Flip-Flops": ["SR Latch and Flip-Flop", "JK Flip-Flop & Race-Around condition", "D-type and T-type Flip-Flops"],
+    "Sequential Circuits": ["Shift Registers", "Synchronous Counters", "Asynchronous (Ripple) Counters"],
+    "FSM": ["Mealy vs Moore machines", "State transition tables & diagrams"]
+  },
+  "electrical-machines": {
+    "Transformers": ["Ideal Transformer equations", "Equivalent circuit models", "Open-circuit & Short-circuit tests", "Efficiency and Regulation"],
+    "DC Machines": ["EMF and Torque equations", "Armature reaction", "Speed control of DC Shunt/Series Motors"],
+    "Induction Motors": ["Rotating Magnetic Field theory", "Slip & Torque-Slip characteristics", "Starting methods & Speed controls"],
+    "Synchronous Machines": ["Alternator EMF equation", "Voltage regulation (EMF/MMF methods)", "V-curves of Synchronous Motors"]
+  },
+  "power-systems-analysis": {
+    "Transmission lines": ["Short, Medium, and Long line representations", "Efficiency & Regulation", "Corona effect"],
+    "Load Flow Studies": ["Bus Classification", "Gauss-Seidel method", "Newton-Raphson method"],
+    "Fault Analysis": ["Symmetrical Fault calculations", "Symmetrical Components transformation", "Unsymmetrical Faults (LG, LL, LLG)"],
+    "Protections": ["Circuit Breakers operating principles", "Overcurrent & Distance Relays", "Differential Protections"]
+  },
+  "control-systems": {
+    "Transfer Functions": ["Open Loop vs Closed Loop systems", "Block Diagram reduction rules", "Mason's Gain Formula"],
+    "Time Response": ["First and Second Order system parameters", "Steady-State Errors & Error constants"],
+    "Stability": ["Routh-Hurwitz stability criterion", "Root Locus construction rules", "Bode Plots & Gain/Phase margins", "PID controller tuning"]
+  },
+  "pcb-design-kicad": {
+    "Schematic": ["Adding symbols & libraries", "Wiring nets and ports", "Electrical Rules Check (ERC)"],
+    "PCB Layout": ["Footprint associations", "Netlist import", "Design Rules Check (DRC)", "Gerber generation"]
+  },
+  "engineering-mathematics": {
+    "Linear Algebra": ["Matrix rank", "System of Linear Equations", "Eigenvalues & Eigenvectors"],
+    "Calculus": ["Mean Value Theorems", "Partial Derivatives", "Multiple Integrals", "Vector Calculus (Gradient, Divergence, Curl)"],
+    "Differential Equations": ["First order linear equations", "Higher order linear equations with constants"],
+    "Transforms": ["Fourier Series", "Laplace Transforms", "Fourier Transforms"]
+  },
+  "general-aptitude-reasoning": {
+    "Quantitative": ["Percentages, Profit and Loss", "Time and Work", "Simple & Compound Interest"],
+    "Logical": ["Number Series", "Blood Relations", "Seating Arrangements", "Logical deductions"]
+  },
+  "general-studies-gk": {
+    "Polity": ["Indian Constitution Articles", "Fundamental Rights & Duties", "Parliamentary Systems"],
+    "GK": ["Indian Geography & Resources", "Key Historical Movements", "Current Events & Awards"]
+  },
+  "government-exam-projects": {
+    "Projects": ["Grid Voltage Stability Analysis sheet", "132/33kV Substation CAD Blueprints", "Civil Building Foundation Slabs load chart"]
+  }
+}

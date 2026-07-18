@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" fill="#fbbf24"/>
+  <!-- L&T classic brand monogram -->
+  <path d="M22 25H32V65H55V75H22V25Z" fill="#1e293b"/>
+  <path d="M42 25H78V35H65V75H55V35H42V25Z" fill="#1e293b"/>
+  <path d="M45 42H55V52H45V42Z" fill="#ef4444"/>
+</svg>

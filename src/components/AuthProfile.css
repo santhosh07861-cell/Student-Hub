@@ -1,0 +1,212 @@
+.auth-container {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-family);
+}
+
+/* Modern Google Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 18px;
+  border-radius: var(--radius-round);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  outline: none;
+}
+
+[data-theme="light"] .google-btn {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.google-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), var(--shadow-glow);
+}
+
+[data-theme="light"] .google-btn:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--primary);
+}
+
+.google-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.google-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Dropdown Trigger */
+.auth-user-trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+/* Avatar styling */
+.auth-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.auth-avatar:hover {
+  border-color: var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+/* Modern Dropdown */
+.auth-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 280px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-md);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: dropdownFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top right;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Dropdown Header Details */
+.auth-dropdown-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.auth-dropdown-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-light);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.auth-dropdown-name {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  word-break: break-word;
+}
+
+.auth-dropdown-email {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+/* Divider styling */
+.auth-divider {
+  height: 1px;
+  background: var(--border-color);
+  width: 100%;
+}
+
+/* Logout Button */
+.auth-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--danger-light);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  width: 100%;
+}
+
+.auth-logout-btn:hover {
+  background: var(--danger);
+  color: #ffffff;
+  border-color: var(--danger);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* Error Banner */
+.auth-error-banner {
+  background: var(--danger-light);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-error-close {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+}
+
+/* Loading States */
+.auth-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: authSpin 0.8s linear infinite;
+}
+
+@keyframes authSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
