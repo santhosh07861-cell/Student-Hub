@@ -215,8 +215,9 @@
     "status": "Open",
     "requiredSkills": ["C++", "Java", "Python", "Machine Learning", "Image Processing"],
     "requiredDocuments": ["Resume", "Semester transcripts", "Dean Recommendation Letter"],
-    "officialInternshipPage": "https://www.samsung.com/in/about-us/careers/work-at-samsung/",
-    "officialApplicationPage": "https://www.samsung.com/in/about-us/careers/work-at-samsung/",
+    "officialInternshipPage": "https://www.samsung.com/in/aboutsamsung/careers/",
+    "officialApplicationPage": "https://www.samsung.com/in/aboutsamsung/careers/",
+
     "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
   },
   {
