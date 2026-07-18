@@ -246,7 +246,7 @@ export default function Scholarships() {
                 </div>
                 
                 <div className="card-actions" style={{ borderTop: '1px solid var(--border-color)', paddingTop: '12px' }}>
-                  <a href={item.officialApplicationPage || item.officialScholarshipPage || item.applyLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+                  <a href={item.officialApplyLink || item.officialApplicationPage || item.officialScholarshipPage || item.applyLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
                     Apply Now <SvgIcon name="apply" size={14} />
                   </a>
                   <button className="btn btn-glass btn-sm" onClick={() => setSelectedItem(item)}>
@@ -307,10 +307,10 @@ export default function Scholarships() {
               </ul>
 
               <div className="flex gap-sm" style={{ marginTop: '24px', borderTop: '1px solid var(--border-color)', paddingTop: '16px' }}>
-                <a href={selectedItem.officialApplicationPage || selectedItem.officialScholarshipPage || selectedItem.applyLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                <a href={selectedItem.officialApplyLink || selectedItem.officialApplicationPage || selectedItem.officialScholarshipPage || selectedItem.applyLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                   Apply Now <SvgIcon name="apply" size={16} />
                 </a>
-                <a href={selectedItem.officialScholarshipPage || selectedItem.officialWebsite} target="_blank" rel="noopener noreferrer" className="btn btn-glass" style={{ flexGrow: 1 }}>
+                <a href={selectedItem.officialWebsite || selectedItem.officialScholarshipPage} target="_blank" rel="noopener noreferrer" className="btn btn-glass" style={{ flexGrow: 1 }}>
                   Official Website
                 </a>
               </div>
