@@ -5,7 +5,17 @@ import Footer from '../components/Footer';
 import './Scholarships.css';
 import { fetchScholarships } from '../services/api';
 
+const isRecentlyAdded = (dateString) => {
+  if (!dateString) return false;
+  const createdDate = new Date(dateString);
+  const currentDate = new Date();
+  const diffTime = Math.abs(currentDate - createdDate);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays <= 7;
+};
+
 export default function Scholarships() {
+
   const { bookmarks, toggleBookmark } = useContext(AppContext);
 
 
@@ -197,7 +207,11 @@ export default function Scholarships() {
                     <div style={{ minWidth: 0, flex: 1 }}>
                       <h3 className="card-title text-base" style={{ WebkitLineClamp: 2, display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                         {sName}
+                        {isRecentlyAdded(item.created_at) && (
+                          <span className="badge badge-success" style={{ marginLeft: '8px', fontSize: '0.65rem', padding: '2px 6px', display: 'inline-block', verticalAlign: 'middle' }}>New</span>
+                        )}
                       </h3>
+
                       <p className="card-subtitle">{sProvider}</p>
                     </div>
                   </div>
