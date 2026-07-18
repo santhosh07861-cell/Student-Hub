@@ -14,7 +14,9 @@ try {
       if (index !== -1) {
         const key = trimmed.substring(0, index).trim();
         const value = trimmed.substring(index + 1).trim();
-        process.env[key] = value.replace(/^['"]|['"]$/g, ''); // strip optional quotes
+        if (!process.env[key]) {
+          process.env[key] = value.replace(/^['"]|['"]$/g, ''); // strip optional quotes
+        }
       }
     });
   }
