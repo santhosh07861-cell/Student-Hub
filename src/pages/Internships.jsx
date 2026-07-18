@@ -242,7 +242,10 @@ export default function Internships() {
             const roleName = item.role || item.internshipName || '';
             const org = item.companyName || item.organization || item.org || '';
             const detailsHeader = activeTab === 'government' ? 'Required Documents' : 'Required Skills';
-            const detailsList = activeTab === 'government' ? (item.requiredDocuments || []) : (item.requiredSkills || []);
+            const detailsList = activeTab === 'government' 
+              ? (item.requiredDocuments || item.documents || []) 
+              : (item.skills || item.requiredSkills || []);
+
 
             let statusClass = 'badge-secondary';
             if (item.status === 'Open') statusClass = 'badge-primary';
@@ -312,7 +315,7 @@ export default function Internships() {
                   <span className={`badge ${statusClass}`} style={{ padding: '6px 10px', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase' }}>
                     {item.status}
                   </span>
-                  <a href={item.officialApplyLink || item.officialApplicationPage || item.officialInternshipPage} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm" style={{ marginLeft: 'auto' }}>
+                  <a href={item.officialWebsite || item.officialApplyLink || item.officialInternshipPage || item.officialApplicationPage} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm" style={{ marginLeft: 'auto' }}>
                     Apply Now <SvgIcon name="apply" size={14} />
                   </a>
                 </div>

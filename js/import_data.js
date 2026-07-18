@@ -72,26 +72,27 @@ async function importInternships() {
     // 2. Process Private Internships
     pvtData.forEach(item => {
       allInternships.push({
-        role: item.role || '',
-        companyName: item.companyName || '',
-        companyLogo: item.companyLogo || item.logo || '',
+        role: item.internshipName || item.role || '',
+        companyName: item.organization || item.companyName || '',
+        companyLogo: item.logo || item.companyLogo || '',
         logo: item.logo || item.companyLogo || '',
         mode: item.mode || 'Remote',
         location: item.location || '',
         duration: item.duration || '',
         skills: item.requiredSkills || item.skills || [],
-        officialApplyLink: item.officialApplyLink || item.applyLink || '',
-        officialWebsite: item.officialWebsite || '',
+        officialApplyLink: item.officialApplicationPage || item.officialApplyLink || item.applyLink || '',
+        officialWebsite: item.officialInternshipPage || item.officialWebsite || '',
         whoCanApply: item.whoCanApply || '',
         eligibility: item.eligibility || '',
         stipend: item.stipend || '',
-        paidStatus: item.stipend ? (item.stipend.toLowerCase().includes('unpaid') ? 'Unpaid' : 'Paid') : 'Paid',
+        paidStatus: item.paidStatus || (item.stipend ? (item.stipend.toLowerCase().includes('unpaid') ? 'Unpaid' : 'Paid') : 'Paid'),
         status: item.status || 'Open',
         requiredDocuments: item.requiredDocuments || [],
         engineeringBranch: item.engineeringBranch || '',
         isGovernment: false
       });
     });
+
 
     // 3. Process Generic Internships (if any new links)
     genericData.forEach(item => {
