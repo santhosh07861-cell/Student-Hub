@@ -54,7 +54,25 @@ async function checkUrlStatus(url) {
       return 'Closed';
     }
     
+    // If redirected to a generic landing page or homepage, mark as Closed
+    if (response.redirected) {
+      try {
+        const finalUrlObj = new URL(response.url);
+        if (
+          finalUrlObj.pathname === '/' || 
+          finalUrlObj.pathname === '/ww/en/' || 
+          finalUrlObj.pathname === '/ww/en' || 
+          finalUrlObj.pathname.length < 5
+        ) {
+          return 'Closed';
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+    
     return 'Open';
+
   } catch (error) {
     // If the request fails completely (DNS error, etc.), we mark it as closed
     if (error.name === 'AbortError') {
