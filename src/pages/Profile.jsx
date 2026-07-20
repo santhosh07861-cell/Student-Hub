@@ -158,6 +158,12 @@ export default function Profile() {
 
   // Load profile data on load
   useEffect(() => {
+    // Detect password recovery redirect
+    const hash = window.location.hash || window.location.search;
+    if (hash && (hash.includes('type=recovery') || hash.includes('access_token='))) {
+      setShowPasswordModal(true);
+    }
+
     if (user) {
       setLoading(true);
       getProfile(user.id)
@@ -264,7 +270,9 @@ export default function Profile() {
       setSuccessMsg('Password changed successfully!');
       setTimeout(() => setSuccessMsg(''), 4000);
     } catch (err) {
-      setErrorMsg(err.message || 'Failed to change password.');
+      console.error('Change password error:', err);
+      const msg = err?.message || err?.error_description || (typeof err === 'string' ? err : JSON.stringify(err));
+      setErrorMsg(msg && msg !== '{}' ? msg : 'Failed to change password.');
     } finally {
       setActionLoading(false);
     }
@@ -286,7 +294,16 @@ export default function Profile() {
       setSuccessMsg(`Password reset email sent to ${user.email}.`);
       setTimeout(() => setSuccessMsg(''), 6000);
     } catch (err) {
-      setErrorMsg(err.message || 'Failed to send reset email.');
+      console.error('Reset password email error:', err);
+      let detail = err?.message || err?.error_description || (typeof err === 'string' ? err : '');
+      if (!detail || detail === '{}' || detail === '[object Object]') {
+        try {
+          detail = JSON.stringify(err);
+        } catch {
+          detail = err?.toString() || 'Unknown Error';
+        }
+      }
+      setErrorMsg(`Error: ${detail}`);
     } finally {
       setActionLoading(false);
     }
@@ -523,8 +540,9 @@ export default function Profile() {
       )}
 
       {errorMsg && (
-        <div className="alert-banner alert-error">
-          <span>✗ {errorMsg}</span>
+        <div className="alert-banner alert-error" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span>✗ {typeof errorMsg === 'object' ? (errorMsg.message || JSON.stringify(errorMsg)) : errorMsg}</span>
+          <button style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', fontSize: '1.1rem' }} onClick={() => setErrorMsg('')}>&times;</button>
         </div>
       )}
 

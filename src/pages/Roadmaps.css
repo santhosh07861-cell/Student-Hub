@@ -759,8 +759,12 @@
     gap: 32px !important;
   }
   
+  .roadmap-flowchart-pane {
+    padding-left: 16px !important;
+  }
+  
   .timeline-vertical-connector {
-    left: 20px !important;
+    left: 36px !important;
   }
   
   .step-node-indicator {

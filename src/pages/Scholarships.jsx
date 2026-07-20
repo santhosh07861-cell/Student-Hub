@@ -4,6 +4,7 @@ import { SvgIcon } from '../components/SvgIcon';
 import Footer from '../components/Footer';
 import './Scholarships.css';
 import { fetchScholarships } from '../services/api';
+import { supabase } from '../services/supabase';
 
 const isRecentlyAdded = (dateString) => {
   if (!dateString) return false;
@@ -12,6 +13,24 @@ const isRecentlyAdded = (dateString) => {
   const diffTime = Math.abs(currentDate - createdDate);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   return diffDays <= 7;
+};
+
+const getCleanApplyLink = (item) => {
+  if (!item) return '';
+  let link = item.officialApplyLink || item.officialApplicationPage || item.officialScholarshipPage || item.applyLink || '';
+  if (link.includes('mahadbt.maharashtra.gov.in/ApplicantLogin/')) {
+    return 'https://mahadbt.maharashtra.gov.in/';
+  }
+  return link;
+};
+
+const getCleanWebsiteLink = (item) => {
+  if (!item) return '';
+  let link = item.officialWebsite || getCleanApplyLink(item);
+  if (link.includes('mahadbt.maharashtra.gov.in/ApplicantLogin/')) {
+    return 'https://mahadbt.maharashtra.gov.in/';
+  }
+  return link;
 };
 
 export default function Scholarships() {
@@ -35,20 +54,40 @@ export default function Scholarships() {
 
   // Fetch lists
   useEffect(() => {
+    const loadData = () => {
+      fetchScholarships()
+        .then(data => {
+          const gov = data.filter(item => item.isGovernment);
+          const pvt = data.filter(item => !item.isGovernment);
+          setGovernmentList(gov);
+          setPrivateList(pvt);
+          setLoading(false);
+        })
+        .catch(() => {
+          setGovernmentList([]);
+          setPrivateList([]);
+          setLoading(false);
+        });
+    };
+
     setLoading(true);
-    fetchScholarships()
-      .then(data => {
-        const gov = data.filter(item => item.isGovernment);
-        const pvt = data.filter(item => !item.isGovernment);
-        setGovernmentList(gov);
-        setPrivateList(pvt);
-        setLoading(false);
-      })
-      .catch(() => {
-        setGovernmentList([]);
-        setPrivateList([]);
-        setLoading(false);
-      });
+    loadData();
+
+    // Listen for database changes in real-time
+    const channel = supabase
+      .channel('scholarship-realtime')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'scholarship' },
+        () => {
+          loadData();
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, []);
 
 
@@ -185,6 +224,21 @@ export default function Scholarships() {
             const isBookmarked = (bookmarks.scholarships || []).includes(item.id);
             const sName = item.scholarshipName || item.name || '';
             const sProvider = item.provider || item.organization || '';
+            // Resolve automatic status based on deadline date
+            let statusVal = item.status || 'Open';
+            if (item.deadline) {
+              const deadlineDate = new Date(item.deadline);
+              deadlineDate.setHours(23, 59, 59, 999);
+              const currentDate = new Date();
+              if (currentDate > deadlineDate) {
+                statusVal = 'Closed';
+              }
+            }
+
+            let statusClass = 'badge-secondary';
+            if (statusVal === 'Open') statusClass = 'badge-primary';
+            if (statusVal === 'Closed') statusClass = 'badge-danger';
+            if (statusVal === 'Upcoming') statusClass = 'badge-warning';
 
             return (
               <div className="card card-lift" key={item.id}>
@@ -205,11 +259,13 @@ export default function Scholarships() {
                       </div>
                     </div>
                     <div style={{ minWidth: 0, flex: 1 }}>
+                      {isRecentlyAdded(item.created_at) && (
+                        <div style={{ marginBottom: '4px' }}>
+                          <span className="badge badge-success" style={{ fontSize: '0.65rem', padding: '2px 6px', display: 'inline-block' }}>New</span>
+                        </div>
+                      )}
                       <h3 className="card-title text-base" style={{ WebkitLineClamp: 2, display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                         {sName}
-                        {isRecentlyAdded(item.created_at) && (
-                          <span className="badge badge-success" style={{ marginLeft: '8px', fontSize: '0.65rem', padding: '2px 6px', display: 'inline-block', verticalAlign: 'middle' }}>New</span>
-                        )}
                       </h3>
 
                       <p className="card-subtitle">{sProvider}</p>
@@ -245,11 +301,14 @@ export default function Scholarships() {
                   </div>
                 </div>
                 
-                <div className="card-actions" style={{ borderTop: '1px solid var(--border-color)', paddingTop: '12px' }}>
-                  <a href={item.officialApplyLink || item.officialApplicationPage || item.officialScholarshipPage || item.applyLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+                <div className="card-actions" style={{ borderTop: '1px solid var(--border-color)', paddingTop: '12px', gap: '8px', display: 'flex', alignItems: 'center' }}>
+                  <span className={`badge ${statusClass}`} style={{ padding: '6px 10px', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                    {statusVal}
+                  </span>
+                  <a href={getCleanApplyLink(item)} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
                     Apply Now <SvgIcon name="apply" size={14} />
                   </a>
-                  <button className="btn btn-glass btn-sm" onClick={() => setSelectedItem(item)}>
+                  <button className="btn btn-glass btn-sm" onClick={() => setSelectedItem(item)} style={{ marginLeft: 'auto' }}>
                     Requirements
                   </button>
                 </div>
@@ -307,10 +366,10 @@ export default function Scholarships() {
               </ul>
 
               <div className="flex gap-sm" style={{ marginTop: '24px', borderTop: '1px solid var(--border-color)', paddingTop: '16px' }}>
-                <a href={selectedItem.officialApplyLink || selectedItem.officialApplicationPage || selectedItem.officialScholarshipPage || selectedItem.applyLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                <a href={getCleanApplyLink(selectedItem)} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                   Apply Now <SvgIcon name="apply" size={16} />
                 </a>
-                <a href={selectedItem.officialWebsite || selectedItem.officialScholarshipPage} target="_blank" rel="noopener noreferrer" className="btn btn-glass" style={{ flexGrow: 1 }}>
+                <a href={getCleanWebsiteLink(selectedItem)} target="_blank" rel="noopener noreferrer" className="btn btn-glass" style={{ flexGrow: 1 }}>
                   Official Website
                 </a>
               </div>

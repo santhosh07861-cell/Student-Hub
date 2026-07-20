@@ -4,6 +4,7 @@ import { SvgIcon } from '../components/SvgIcon';
 import Footer from '../components/Footer';
 import './Internships.css';
 import { fetchInternships } from '../services/api';
+import { supabase } from '../services/supabase';
 
 const isRecentlyAdded = (dateString) => {
   if (!dateString) return false;
@@ -35,20 +36,40 @@ export default function Internships() {
 
   // Fetch data
   useEffect(() => {
+    const loadData = () => {
+      fetchInternships()
+        .then(data => {
+          const gov = data.filter(item => item.isGovernment);
+          const pvt = data.filter(item => !item.isGovernment);
+          setGovernmentList(gov);
+          setPrivateList(pvt);
+          setLoading(false);
+        })
+        .catch(() => {
+          setGovernmentList([]);
+          setPrivateList([]);
+          setLoading(false);
+        });
+    };
+
     setLoading(true);
-    fetchInternships()
-      .then(data => {
-        const gov = data.filter(item => item.isGovernment);
-        const pvt = data.filter(item => !item.isGovernment);
-        setGovernmentList(gov);
-        setPrivateList(pvt);
-        setLoading(false);
-      })
-      .catch(() => {
-        setGovernmentList([]);
-        setPrivateList([]);
-        setLoading(false);
-      });
+    loadData();
+
+    // Listen for database changes in real-time
+    const channel = supabase
+      .channel('internship-realtime')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'internship' },
+        () => {
+          loadData();
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, []);
 
 
@@ -247,10 +268,21 @@ export default function Internships() {
               : (item.skills || item.requiredSkills || []);
 
 
+            // Resolve automatic status based on deadline date
+            let statusVal = item.status || 'Open';
+            if (item.deadline) {
+              const deadlineDate = new Date(item.deadline);
+              deadlineDate.setHours(23, 59, 59, 999);
+              const currentDate = new Date();
+              if (currentDate > deadlineDate) {
+                statusVal = 'Closed';
+              }
+            }
+
             let statusClass = 'badge-secondary';
-            if (item.status === 'Open') statusClass = 'badge-primary';
-            if (item.status === 'Closed') statusClass = 'badge-danger';
-            if (item.status === 'Upcoming') statusClass = 'badge-warning';
+            if (statusVal === 'Open') statusClass = 'badge-primary';
+            if (statusVal === 'Closed') statusClass = 'badge-danger';
+            if (statusVal === 'Upcoming') statusClass = 'badge-warning';
 
             return (
               <div className="card card-lift" key={item.id}>
@@ -271,11 +303,13 @@ export default function Internships() {
                       </div>
                     </div>
                     <div style={{ minWidth: 0, flex: 1 }}>
+                      {isRecentlyAdded(item.created_at) && (
+                        <div style={{ marginBottom: '4px' }}>
+                          <span className="badge badge-success" style={{ fontSize: '0.65rem', padding: '2px 6px', display: 'inline-block' }}>New</span>
+                        </div>
+                      )}
                       <h3 className="card-title text-base" style={{ WebkitLineClamp: 2, display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                         {roleName}
-                        {isRecentlyAdded(item.created_at) && (
-                          <span className="badge badge-success" style={{ marginLeft: '8px', fontSize: '0.65rem', padding: '2px 6px', display: 'inline-block', verticalAlign: 'middle' }}>New</span>
-                        )}
                       </h3>
 
                       <p className="card-subtitle">{org}</p>
@@ -313,7 +347,7 @@ export default function Internships() {
                 
                 <div className="card-actions" style={{ borderTop: '1px solid var(--border-color)', paddingTop: '12px', gap: '8px' }}>
                   <span className={`badge ${statusClass}`} style={{ padding: '6px 10px', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase' }}>
-                    {item.status}
+                    {statusVal}
                   </span>
                   <a href={item.officialWebsite || item.officialApplyLink || item.officialInternshipPage || item.officialApplicationPage} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm" style={{ marginLeft: 'auto' }}>
                     Apply Now <SvgIcon name="apply" size={14} />
